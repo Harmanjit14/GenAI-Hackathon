@@ -66,7 +66,6 @@ def get_messages():
         count = 0
         if response.status_code == 200:
             messages = response.json()["items"]
-            print(response.json())
             for message in messages:
                 count += 1
                 if message.get("text"):
